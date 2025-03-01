@@ -42,16 +42,16 @@ Users/ Filter by name
 ![Screenshot](src/assets/User:filterbyName.png)
 
 Users/ Filter by Email
-![Screenshot](src/assets/Users:filterbyEmail.png)
+![Screenshot](src/assets/Users:filterByEmail.png)
 
 Users/ Search
 ![Screenshot](src/assets/User:Search.png)
 
 Products/ Filter by Category
-![Screenshot](src/assets/Product:filterbyCategory.png)
+![Screenshot](src/assets/Product:filterByCategory.png)
 
 Products/ Filter by Price
-![Screenshot](src/assets/Product:filterbyPrice.png)
+![Screenshot](src/assets/Product:filterByPrice.png)
 
 Products/ Filter by Rating
-![Screenshot](src/assets/Product:filterbyRating.png)
+![Screenshot](src/assets/Product:filterByRating.png)
