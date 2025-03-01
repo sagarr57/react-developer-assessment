@@ -1,46 +1,57 @@
-# Getting Started with Create React App
+# Users and Products Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple dashboard application built with React and TypeScript, showcasing data from the DummyJSON API (https://dummyjson.com/). It features two pages: /users and /products, both utilizing reusable components and demonstrating data fetching, state management, and filtering.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+* **Data Fetching:** Uses the `axios` library to fetch user and product data from the DummyJSON API.
+* **State Management:** Employs Redux Toolkit to manage application state, including fetched data, pagination, and filter values.
+* **Filtering:**
+    * **Page Size:** Allows users to select the number of items to display per page (5, 10, 20, 50).
+    * **Search:** Provides a client-side search functionality to filter data based on a search query.
+    * **Other Filters:** Offers various filters for users (name, email, birth date, gender) and products (title, brand, category) that interact with the API to fetch filtered data.
+* **Pagination:** Implements pagination to navigate through large datasets.
+* **Data Table:** Displays fetched data in a tabular format with relevant columns.
+* **Styling:** Utilizes Tailwind CSS for styling with a specified color palette.
+* **Font:** Uses the "Neutra Text" font family.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* React
+* TypeScript
+* Redux Toolkit
+* Axios
+* Tailwind CSS
+* DummyJSON API
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation and Setup
 
-### `npm test`
+1. Clone the repository: `git clone <repository-url>`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Screenshots
 
-### `npm run build`
+Users Page
+![Screenshot](src/assets/UsersPage.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Products Page
+![Screenshot](src/assets/ProductsPage.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Users/ Filter by name
+![Screenshot](src/assets/User:filterbyName.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Users/ Filter by Email
+![Screenshot](src/assets/Users:filterbyEmail.png)
 
-### `npm run eject`
+Users/ Search
+![Screenshot](src/assets/User:Search.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Products/ Filter by Category
+![Screenshot](src/assets/Product:filterbyCategory.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Products/ Filter by Price
+![Screenshot](src/assets/Product:filterbyPrice.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Products/ Filter by Rating
+![Screenshot](src/assets/Product:filterbyRating.png)

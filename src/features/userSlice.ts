@@ -3,19 +3,23 @@ import axios from "axios";
 
 const API_URL = "https://dummyjson.com/users";
 
-export const fetchUsers = createAsyncThunk("users/fetchUsers", async (limit: number = 5) => {
-  const response = await axios.get(`${API_URL}?limit=${limit}`);
-  return response.data.users;
+export const fetchUsers = createAsyncThunk("users/fetchUsers", async (params: { limit: number; page: number }) => {
+  const response = await axios.get(`${API_URL}`, {
+    params: { limit: params.limit, skip: (params.page - 1) * params.limit },
+  });
+  return response.data;
 });
 
 interface UserState {
   users: any[];
   status: "idle" | "loading" | "succeeded" | "failed";
+  totalUsers: number;
 }
 
 const initialState: UserState = {
   users: [],
   status: "idle",
+  totalUsers: 0,
 };
 
 const userSlice = createSlice({
@@ -29,7 +33,8 @@ const userSlice = createSlice({
       })
       .addCase(fetchUsers.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.users = action.payload;
+        state.users = action.payload.users;
+        state.totalUsers = action.payload.total;
       })
       .addCase(fetchUsers.rejected, (state) => {
         state.status = "failed";
