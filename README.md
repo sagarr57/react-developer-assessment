@@ -39,7 +39,7 @@ Products Page
 ![Screenshot](src/assets/ProductsPage.png)
 
 Users/ Filter by name
-![Screenshot](src/assets/User:filterbyName.png)
+![Screenshot](src/assets/User:filterByName.png)
 
 Users/ Filter by Email
 ![Screenshot](src/assets/Users:filterByEmail.png)
